@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camera - Capturador Analítico</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container">
+        <header>
+            <h1>📷 Camera </h1>
+            <p class="subtitle">Captura com filtro visual e identificação dinâmica</p>
+        </header>
+
+        <section class="input-group">
+            <label for="nomeAluno">Identificação para a foto:</label>
+            <input
+                type="text"
+                id="nomeAluno"
+                placeholder="Digite seu nome"
+                maxlength="40"
+                value="Aluno"
+            >
+        </section>
+
+        <section class="video-wrapper">
+            <video id="video" autoplay playsinline muted></video>
+            <div id="statusCamera" class="status-camera"></div>
+        </section>
+
+        <section class="controls">
+            <button id="btnLigar" class="btn btn-primary">▶️ Ligar Câmera</button>
+            <button id="btnCapturar" class="btn btn-capture" disabled>📸 Capturar Foto</button>
+            <button id="btnDesligar" class="btn btn-danger" disabled>🔴 Desligar Câmera</button>
+        </section>
+
+        <section class="resultado">
+            <h2>Resultado da Captura:</h2>
+            <canvas id="canvas" width="640" height="480"></canvas>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
